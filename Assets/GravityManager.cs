@@ -4,7 +4,10 @@ using UnityEngine;
 
 public static class GravityManager
 {
-    const float GravitationalConstant = -0.00000000006672f;
+    public const float GravitationalConstant = -0.00000000006672f;
+    public const float physicsTimeStep = 0.01f;
+
+
 
     public static List<GravityManagerNode> NodeCollection= new List<GravityManagerNode>();
     public static float timescale = 10000f;
@@ -35,7 +38,7 @@ public static class GravityManager
 
 
 
-        return force*node.massKg*timescale;
+        return force*timescale;
     }
     public static Vector2 getdiffrence(Vector2 A, Vector2 B) =>
         new Vector2(A.x - B.x, A.y - B.y);
