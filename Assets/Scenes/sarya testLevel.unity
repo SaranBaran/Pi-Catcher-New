@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7324f9b29fca0ae46b9e15fa581cafd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedWASD: 0.05
+  speedWASD: 0.02
   zoomLerpSpeed: 10
 --- !u!1 &1670677123
 GameObject:
