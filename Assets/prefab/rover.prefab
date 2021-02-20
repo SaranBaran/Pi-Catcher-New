@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2475356643400612364}
   - component: {fileID: 7154398088357142738}
   - component: {fileID: 8952393075239063936}
+  - component: {fileID: 7277234964156367570}
   m_Layer: 0
   m_Name: rover
   m_TagString: Untagged
@@ -212,4 +213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a7141004ad5314c8b57584a23d70b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 2475356643400612366}
+--- !u!114 &7277234964156367570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475356643400612355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d37b566bcfd4e8455e11a47cf6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
