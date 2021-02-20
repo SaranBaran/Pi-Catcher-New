@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Undefined
   - notMars
+  - Mars
   layers:
   - Default
   - TransparentFX
