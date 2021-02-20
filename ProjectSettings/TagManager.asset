@@ -3,10 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Undefined
   - notMars
   - Mars
+=======
+  tags: []
+>>>>>>> parent of 2ff0e8d (changes after 2 saatlik aram)
   layers:
   - Default
   - TransparentFX
