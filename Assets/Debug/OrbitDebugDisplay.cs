@@ -100,6 +100,11 @@ public class OrbitDebugDisplay : MonoBehaviour {
 
     Vector3 CalculateAcceleration (int i, VirtualBody[] virtualBodies) {
         Vector3 acceleration = Vector3.zero;
+        if (virtualBodies[i].isBlackhole)
+        {
+            return acceleration;
+
+        }
         for (int j = 0; j < virtualBodies.Length; j++) {
             if (i == j) {
                 continue;
@@ -131,11 +136,12 @@ public class OrbitDebugDisplay : MonoBehaviour {
         public Vector3 position;
         public Vector3 velocity;
         public float mass;
-
+        public bool isBlackhole;
         public VirtualBody (CelestialBody body) {
             position = body.transform.position;
             velocity = body.initialVelocity;
             mass = body.mass;
+            isBlackhole = body.isblackhole;
         }
     }
 }

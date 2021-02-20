@@ -278,6 +278,7 @@ MonoBehaviour:
   surfaceGravity: 3.59
   initialVelocity: {x: 19.02, y: 0, z: 0}
   bodyName: blueone
+  isblackhole: 0
 --- !u!1 &271921143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1554,7 @@ MonoBehaviour:
   surfaceGravity: 0.5
   initialVelocity: {x: 23.8, y: 0, z: 0}
   bodyName: green
+  isblackhole: 0
 --- !u!58 &671819372
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2938,6 +2940,7 @@ MonoBehaviour:
   surfaceGravity: 20
   initialVelocity: {x: 0, y: 0, z: 0}
   bodyName: sun
+  isblackhole: 0
 --- !u!1 &1158402166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,9 +5258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6ef2fcb7f6148cf8a53f5168954df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSteps: 1000
+  numSteps: 10000
   livenumSteps: 2000
-  timeStep: 0.000001
+  timeStep: 0.01
   usePhysicsTimeStep: 0
   relativeToBody: 0
   centralBody: {fileID: 39644610}
@@ -5315,6 +5318,7 @@ MonoBehaviour:
   surfaceGravity: 0.00001
   initialVelocity: {x: 13, y: -0.5, z: 0}
   bodyName: gravity assist test
+  isblackhole: 0
 --- !u!58 &1397157257
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5573,6 +5577,7 @@ MonoBehaviour:
   surfaceGravity: 9.97
   initialVelocity: {x: -51.22, y: 0, z: 0}
   bodyName: redone
+  isblackhole: 0
 --- !u!1 &1653438161
 GameObject:
   m_ObjectHideFlags: 0
@@ -9004,8 +9009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1
   surfaceGravity: 20000
-  initialVelocity: {x: 48.74, y: -0.29, z: 0}
+  initialVelocity: {x: 0, y: 0, z: 0}
   bodyName: Blackhole
+  isblackhole: 1
 --- !u!58 &2052676677
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9030,7 +9036,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052676674}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -9057,7 +9063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   massKg: 10000
   rb: {fileID: 0}
-  startVelocity: {x: 0.0001, y: 0}
+  startVelocity: {x: 0, y: 0}
 --- !u!212 &2052676680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9161,6 +9167,7 @@ MonoBehaviour:
   surfaceGravity: 9.97
   initialVelocity: {x: -3.08, y: -1, z: 0}
   bodyName: noneliptical
+  isblackhole: 0
 --- !u!58 &2102968682
 CircleCollider2D:
   m_ObjectHideFlags: 0
