@@ -10,10 +10,12 @@ public class CelestialBody : GravityObject {
     public Vector3 initialVelocity;
     public string bodyName = "Unnamed";
     public bool isblackhole = false;
+    public bool isactive = true;
     Transform meshHolder;
 
     public Vector2 velocity { get; private set; }
-    public float mass { get;  set; }
+    private float calcmass;
+    public float mass { get { if (isactive) return calcmass; else return 0f; } set { calcmass = value; } }
     Rigidbody2D rb;
 
     void Awake () {
@@ -23,7 +25,7 @@ public class CelestialBody : GravityObject {
     }
 
     public void UpdateVelocity (CelestialBody[] allBodies, float timeStep) {
-        if (isblackhole) { velocity = Vector2.zero; return; }
+        if (isblackhole || !isactive) { velocity = Vector2.zero; return; }
         foreach (var otherBody in allBodies) {
             if (otherBody != this) {
                 float sqrDst = (otherBody.rb.position - rb.position).sqrMagnitude;
@@ -36,7 +38,7 @@ public class CelestialBody : GravityObject {
     }
 
     public void UpdateVelocity (Vector2 acceleration, float timeStep) {
-        if (isblackhole) { velocity =Vector2.zero ; return; }
+        if (isblackhole || !isactive) { velocity =Vector2.zero ; return; }
         velocity += acceleration * timeStep;
     }
 
@@ -51,7 +53,7 @@ public class CelestialBody : GravityObject {
         meshHolder.localScale = Vector2.one * radius;
         gameObject.name = bodyName;
     }
-
+    
     public Rigidbody2D Rigidbody {
         get {
             return rb;

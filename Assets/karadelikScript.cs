@@ -7,7 +7,7 @@ public class karadelikScript : MonoBehaviour
     private float startPosX;
     private float startPosY;
     private bool isBeingHeld = false;
-
+    
     void Update()
     {
 
