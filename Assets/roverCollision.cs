@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class roverCollision : MonoBehaviour
 {
-
-    void OnTriggerEnter2D(Collider2D Mars)
+    void OnTriggerEnter2D(Collider2D Planet)
     {
-        if (Mars.tag == "Mars")
+        if (Planet.tag == "Mars")
         {
-            //marsa gelince
+            GetComponent<Animator>().SetTrigger("Win");
         }
     }
 
