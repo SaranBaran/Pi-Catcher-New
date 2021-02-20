@@ -14,7 +14,7 @@ public class CelestialBody : GravityObject {
     Transform meshHolder;
 
     public Vector2 velocity { get; private set; }
-    private float calcmass;
+    [SerializeField]private float calcmass;
     public float mass { get { if (isactive) return calcmass; else return 0f; } set { calcmass = value; } }
     Rigidbody2D rb;
 
