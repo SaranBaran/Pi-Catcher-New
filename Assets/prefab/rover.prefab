@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2475356643400612352}
   - component: {fileID: 2475356643400612353}
   - component: {fileID: 2475356643400612354}
-  - component: {fileID: 2475356643400612367}
   - component: {fileID: 2475356643400612366}
   - component: {fileID: 2475356643400612364}
-  - component: {fileID: 2475356643400612365}
+  - component: {fileID: 7154398088357142738}
+  - component: {fileID: 8952393075239063936}
   m_Layer: 0
   m_Name: rover
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5345f2c1cc3712845810a53994213d31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 191bde2cc7a16114f9babfbfcd904428, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,18 +148,6 @@ PolygonCollider2D:
       - {x: 0.3125, y: 0.46875}
       - {x: 0.3125, y: -0.03125}
       - {x: -0.09375, y: -0.03125}
---- !u!114 &2475356643400612367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2475356643400612355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9134bd28a485dc43a5195ef38701ebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2475356643400612366
 Animator:
   serializedVersion: 3
@@ -200,7 +188,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2475356643400612365
+--- !u!114 &7154398088357142738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,7 +197,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2475356643400612355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1486fb6f3d644ae45bdb6f0d1f366660, type: 3}
+  m_Script: {fileID: 11500000, guid: 70168638f4e2af94699749626d4d7b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2475356643400612366}
+--- !u!114 &8952393075239063936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475356643400612355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a7141004ad5314c8b57584a23d70b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
