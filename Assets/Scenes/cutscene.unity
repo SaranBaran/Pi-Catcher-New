@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ef36347ac5c6240889380c617f6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: yavuz Testing DO NOT TOUCH
+  nextSceneName: 
   sceneOne: {fileID: 896634339}
   sceneTwo: {fileID: 157404819}
   sceneThree: {fileID: 2054833550}
@@ -2095,7 +2095,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 647185665}
         m_TargetAssemblyTypeName: scenes, Assembly-CSharp
-        m_MethodName: SceneFour
+        m_MethodName: startGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
