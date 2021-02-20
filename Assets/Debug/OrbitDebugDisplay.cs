@@ -16,6 +16,7 @@ public class OrbitDebugDisplay : MonoBehaviour {
         if (Application.isPlaying) {
             //HideOrbits ();
             numSteps = livenumSteps;
+            useThickLines = true;
         }
     }
 
