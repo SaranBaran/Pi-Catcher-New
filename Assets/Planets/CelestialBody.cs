@@ -9,6 +9,7 @@ public class CelestialBody : GravityObject {
     public float surfaceGravity;
     public Vector3 initialVelocity;
     public string bodyName = "Unnamed";
+    public bool isblackhole = false;
     Transform meshHolder;
 
     public Vector2 velocity { get; private set; }
@@ -22,6 +23,7 @@ public class CelestialBody : GravityObject {
     }
 
     public void UpdateVelocity (CelestialBody[] allBodies, float timeStep) {
+        if (isblackhole) { velocity = Vector2.zero; return; }
         foreach (var otherBody in allBodies) {
             if (otherBody != this) {
                 float sqrDst = (otherBody.rb.position - rb.position).sqrMagnitude;
@@ -34,6 +36,7 @@ public class CelestialBody : GravityObject {
     }
 
     public void UpdateVelocity (Vector2 acceleration, float timeStep) {
+        if (isblackhole) { velocity =Vector2.zero ; return; }
         velocity += acceleration * timeStep;
     }
 
