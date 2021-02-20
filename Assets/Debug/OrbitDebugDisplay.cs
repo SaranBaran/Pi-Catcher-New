@@ -9,7 +9,7 @@ public class OrbitDebugDisplay : MonoBehaviour {
 
     public bool relativeToBody;
     public CelestialBody centralBody;
-    public float width = 100;
+    public float width = 1;
     public bool useThickLines;
 
     void Start () {

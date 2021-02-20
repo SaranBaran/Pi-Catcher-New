@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NBodySimulation : MonoBehaviour {
-    CelestialBody[] bodies;
+    public CelestialBody[] bodies;
     static NBodySimulation instance;
 
     void Awake () {
@@ -43,9 +43,10 @@ public class NBodySimulation : MonoBehaviour {
         get {
             return Instance.bodies;
         }
+        
     }
 
-    static NBodySimulation Instance {
+   public static NBodySimulation Instance {
         get {
             if (instance == null) {
                 instance = FindObjectOfType<NBodySimulation> ();

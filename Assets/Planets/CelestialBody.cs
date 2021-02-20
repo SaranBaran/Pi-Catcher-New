@@ -13,7 +13,7 @@ public class CelestialBody : GravityObject {
     Transform meshHolder;
 
     public Vector2 velocity { get; private set; }
-    public float mass { get; private set; }
+    public float mass { get;  set; }
     Rigidbody2D rb;
 
     void Awake () {
