@@ -3,7 +3,7 @@
 [ExecuteInEditMode]
 public class OrbitDebugDisplay : MonoBehaviour {
 
-    public int numSteps = 1000;
+    public int numSteps = 10000, livenumSteps = 2000;
     public float timeStep = 0.1f;
     public bool usePhysicsTimeStep;
 
@@ -14,15 +14,16 @@ public class OrbitDebugDisplay : MonoBehaviour {
 
     void Start () {
         if (Application.isPlaying) {
-            HideOrbits ();
+            //HideOrbits ();
+            numSteps = livenumSteps;
         }
     }
 
     void Update () {
 
-        if (!Application.isPlaying) {
+     //   if (!Application.isPlaying) {
             DrawOrbits ();
-        }
+      //  }
     }
 
     void DrawOrbits () {
@@ -40,6 +41,10 @@ public class OrbitDebugDisplay : MonoBehaviour {
             if (bodies[i] == centralBody && relativeToBody) {
                 referenceFrameIndex = i;
                 referenceBodyInitialPosition = virtualBodies[i].position;
+            }
+            if (Application.isPlaying)
+            {
+                virtualBodies[i].velocity = bodies[i].velocity;
             }
         }
 
