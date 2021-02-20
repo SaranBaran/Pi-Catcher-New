@@ -11,12 +11,11 @@ public class roverNotCollision : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void OnTriggerEnter2D(Collider2D Planet)
+    public void OnTriggerEnter2D(Collider2D Default)
     {
-        if (Planet.tag == "notMars")
+        if (Default.tag == "notMars")
         {
             anim.SetBool("Crash", true);
-            Debug.Log("test");
         }
     }
 
