@@ -30557,6 +30557,7 @@ MonoBehaviour:
   bodyName: blueone
   isblackhole: 0
   isactive: 1
+  calcmass: 1292400
 --- !u!58 &474048714
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30739,6 +30740,7 @@ MonoBehaviour:
   bodyName: Blackhole
   isblackhole: 1
   isactive: 0
+  calcmass: 200000000
 --- !u!58 &512509823
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41007,6 +41009,7 @@ MonoBehaviour:
   bodyName: redone
   isblackhole: 0
   isactive: 1
+  calcmass: 333885.38
 --- !u!58 &677133032
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41124,7 +41127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73a970b639fd934bba43f09c2002d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes: scenes
+  scenes: cutscene
 --- !u!4 &764668447
 Transform:
   m_ObjectHideFlags: 0
@@ -41271,6 +41274,7 @@ MonoBehaviour:
   bodyName: gravity assist test
   isblackhole: 0
   isactive: 1
+  calcmass: 1.0000001e-21
 --- !u!58 &803318213
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41485,6 +41489,7 @@ MonoBehaviour:
   bodyName: MARS
   isblackhole: 0
   isactive: 1
+  calcmass: 7000000
 --- !u!58 &994232687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41602,7 +41607,7 @@ Transform:
   m_GameObject: {fileID: 1242741766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -53.920002, y: -13.830002, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 465826021}
   m_Father: {fileID: 861435995}
@@ -41626,6 +41631,7 @@ MonoBehaviour:
   bodyName: green
   isblackhole: 0
   isactive: 1
+  calcmass: 5000
 --- !u!58 &1242741769
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41703,7 +41709,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92476f4cc3e5903418b759ac5ae47c98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a57c6fe1e2abf374db5c6f4de1ebc831, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -41753,6 +41759,7 @@ MonoBehaviour:
   bodyName: sun
   isblackhole: 0
   isactive: 1
+  calcmass: 500000000
 --- !u!58 &1482459082
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -83091,6 +83098,7 @@ MonoBehaviour:
   bodyName: noneliptical
   isblackhole: 0
   isactive: 1
+  calcmass: 333885.38
 --- !u!58 &2119661584
 CircleCollider2D:
   m_ObjectHideFlags: 0
