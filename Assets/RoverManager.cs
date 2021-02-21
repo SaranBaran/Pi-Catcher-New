@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RoverManager : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class RoverManager : MonoBehaviour
         if (distance <= 0)
         {
             distanceTexts.text = "Landed!";
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

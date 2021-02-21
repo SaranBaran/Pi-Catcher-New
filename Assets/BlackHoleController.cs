@@ -5,6 +5,9 @@ using UnityEngine;
 public class BlackHoleController : MonoBehaviour
 {
     public Color activeclolor,PassiveColor;
+
+    public AudioSource karadelikSound;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -14,11 +17,11 @@ public class BlackHoleController : MonoBehaviour
             GetComponent<SpriteRenderer>().color = GetComponent<CelestialBody>().isactive ? activeclolor : PassiveColor;
             if (GetComponent<CelestialBody>().isactive)
             {
-                asdf.Start();
+                karadelikSound.Start();
             }
             else
             {
-                asdf.Stop();
+                karadelikSound.Stop();
             }
         }
     }
