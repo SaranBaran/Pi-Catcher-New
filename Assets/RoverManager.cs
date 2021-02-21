@@ -11,6 +11,7 @@ public class RoverManager : MonoBehaviour
     public Text distanceTexts;
     private float distance;
     public Animator anim;
+    public AudioSource lost;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class RoverManager : MonoBehaviour
     {
         if (Planet.tag == "notMars")//mars olmayan her şey için
         {
+            lost.Play();
             anim.SetBool("Crash", true);
             Debug.Log("test");
         }
