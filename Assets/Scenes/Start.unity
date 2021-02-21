@@ -30851,6 +30851,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 1292400
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &474048714
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30991,6 +30993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeclolor: {r: 0.95820236, g: 0, b: 0.9716981, a: 1}
   PassiveColor: {r: 0.2784314, g: 0, b: 0.28235295, a: 1}
+  karadelikSound: {fileID: 0}
 --- !u!114 &512509820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31034,6 +31037,8 @@ MonoBehaviour:
   isblackhole: 1
   isactive: 0
   calcmass: 200000000
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &512509823
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41303,6 +41308,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 333885.38
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &677133032
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41667,6 +41674,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 1.0000001e-21
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &803318213
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41882,6 +41891,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 7000000
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &994232687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -42024,6 +42035,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 5000
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &1242741769
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -42231,6 +42244,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 500000000
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &1482459082
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -84369,6 +84384,8 @@ MonoBehaviour:
   isblackhole: 0
   isactive: 1
   calcmass: 333885.38
+  useSpecialColor: 0
+  SpecialColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &2119661584
 CircleCollider2D:
   m_ObjectHideFlags: 0
