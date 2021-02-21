@@ -44,11 +44,11 @@ public class cameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.R))
         {
-            transform.position = rover.transform.position;
+            transform.position.Set(rover.transform.position.x, rover.transform.position.y, transform.position.z);
         }
         if (rover.isZoom)
         {
-            transform.position.Set (rover.transform.position.x,rover.transform.position.y,transform.position.z);
+            transform.position.Set(rover.transform.position.x, rover.transform.position.y, transform.position.z);
             cam.orthographicSize = 3f;
         }
     }
