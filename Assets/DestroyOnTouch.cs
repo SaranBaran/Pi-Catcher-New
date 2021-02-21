@@ -13,7 +13,7 @@ public class DestroyOnTouch : MonoBehaviour
         a.Rigidbody.isKinematic = true;
         a.gameObject.layer = 10;
         a.GetComponent<SpriteRenderer>().enabled = false;
-
+        a.gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,5 +24,7 @@ public class DestroyOnTouch : MonoBehaviour
         a.Rigidbody.isKinematic = true;
         a.gameObject.layer = 10;
         a.GetComponent<SpriteRenderer>().enabled = false;
+        a.gameObject.SetActive(false);
+
     }
 }

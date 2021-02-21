@@ -10,11 +10,13 @@ public class cameraMovement : MonoBehaviour
     private float targetZoom;
     private float zoomFactor = 300f;
     [SerializeField] private float zoomLerpSpeed = 10f;
+    RoverManager rover;
 
     void Start()
     {
         cam = Camera.main;
         targetZoom = cam.orthographicSize;
+        rover = GameObject.FindObjectOfType<RoverManager>();
     }
 
     void Update()
@@ -40,6 +42,11 @@ public class cameraMovement : MonoBehaviour
             Camera.current.transform.Translate(new Vector3(xAxisValue*speedWASD, yAxisValue*speedWASD, 0.0f));
         }
 
+        if (rover.isZoom)
+        {
+            transform.position.Set (rover.transform.position.x,rover.transform.position.y,transform.position.z);
+            cam.orthographicSize = 3f;
+        }
     }
 
     public void LateUpdate()
