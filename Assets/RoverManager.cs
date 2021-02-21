@@ -15,11 +15,16 @@ public class RoverManager : MonoBehaviour
     public AudioSource lost;
     public GameObject youLost;
     public AudioSource crash;
+    public bool isZoom = false;
+    public AudioSource win;
+    public GameObject winCanvas;
 
     void Start()
     {
         youLost.SetActive(false);
         anim = GetComponent<Animator>();
+        isZoom = false;
+        winCanvas.SetActive(false);
     }
 
     void Update()
@@ -52,7 +57,16 @@ public class RoverManager : MonoBehaviour
             anim.SetBool("Crash", true);
             Debug.Log("test");
             Invoke("active", 3f);
+            isZoom = true;
         }
+
+        if (Planet.tag == "Mars")
+        {
+            GetComponent<Animator>().SetTrigger("Win");
+            Invoke("Active", 3f);
+            isZoom = true;
+        }
+
     }
 
     void active()
@@ -60,5 +74,13 @@ public class RoverManager : MonoBehaviour
         youLost.SetActive(true);
         lost.Play();
     }
+
+
+    void Active()
+    {
+        winCanvas.SetActive(true);
+        win.Play();
+    }
+
 
 }
