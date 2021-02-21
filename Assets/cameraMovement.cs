@@ -42,6 +42,10 @@ public class cameraMovement : MonoBehaviour
             Camera.current.transform.Translate(new Vector3(xAxisValue*speedWASD, yAxisValue*speedWASD, 0.0f));
         }
 
+        if (Input.GetKey(KeyCode.R))
+        {
+            transform.position = rover.transform.position;
+        }
         if (rover.isZoom)
         {
             transform.position.Set (rover.transform.position.x,rover.transform.position.y,transform.position.z);
