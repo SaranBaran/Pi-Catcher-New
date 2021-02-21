@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,9 +13,12 @@ public class RoverManager : MonoBehaviour
     private float distance;
     public Animator anim;
     public AudioSource lost;
+    public GameObject youLost;
+    public AudioSource crash;
 
     void Start()
     {
+        youLost.SetActive(false);
         anim = GetComponent<Animator>();
     }
 
@@ -35,16 +38,27 @@ public class RoverManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Start");
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D Planet)
     {
         if (Planet.tag == "notMars")//mars olmayan her şey için
         {
-            lost.Play();
+            crash.Play();
             anim.SetBool("Crash", true);
             Debug.Log("test");
+            Invoke("active", 3f);
         }
+    }
+
+    void active()
+    {
+        youLost.SetActive(true);
+        lost.Play();
     }
 
 }
