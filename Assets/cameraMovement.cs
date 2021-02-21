@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cameraMovement : MonoBehaviour
 {
-    Vector3 lastpos;
+    Vector3 lastpos, lastposcroll;
     public float speedWASD = 0.05f;
     private Camera cam;
     private float targetZoom;
@@ -19,12 +19,19 @@ public class cameraMovement : MonoBehaviour
 
     void Update()
     {
-        float scrollData;
-        scrollData = Input.GetAxis("Mouse ScrollWheel");
 
-        targetZoom -= scrollData * zoomFactor;
-        targetZoom = Mathf.Clamp(targetZoom, 3f, 100000000000000000f);
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
+        if (Input.mouseScrollDelta!=Vector2.zero)
+        {
+            lastposcroll = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + (Input.mouseScrollDelta.y * zoomLerpSpeed*-1f),3f,float.PositiveInfinity);
+            transform.position += lastposcroll - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        }
+        //cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
+
+
+
 
         float xAxisValue = Input.GetAxis("Horizontal");
         float yAxisValue = Input.GetAxis("Vertical");
@@ -40,6 +47,7 @@ public class cameraMovement : MonoBehaviour
         if (Input.GetMouseButton(2))
         {
             transform.position += lastpos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         }
         lastpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
