@@ -9,10 +9,21 @@ public class startMenuManager : MonoBehaviour
 
     public string scenes;
 
+
     public void startScenes()
     {
-        SceneManager.LoadScene(scenes);
+        Invoke("sceneLoad",1);
         Debug.Log("Start");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    void sceneLoad()
+    {
+        SceneManager.LoadScene(scenes);
     }
 
 }
