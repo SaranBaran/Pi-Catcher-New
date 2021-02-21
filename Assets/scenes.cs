@@ -11,6 +11,7 @@ public class scenes : MonoBehaviour
     public GameObject sceneTwo;
     public GameObject sceneThree;
     public GameObject sceneFour;
+    public GameObject sceneFive;
 
 
     void Start()
@@ -19,6 +20,7 @@ public class scenes : MonoBehaviour
         sceneTwo.SetActive(false);
         sceneThree.SetActive(false);
         sceneFour.SetActive(false);
+        sceneFive.SetActive(false);
     }
 
     public void SceneTwo()
@@ -39,7 +41,18 @@ public class scenes : MonoBehaviour
         sceneFour.SetActive(true);
     }
 
+    public void SceneFive()
+    {
+        sceneFive.SetActive(true);
+        sceneFour.SetActive(false);
+    }
+
     public void startGame()
+    {
+        Invoke("sceneLoad", 1);     
+    }
+
+    void sceneLoad()
     {
         SceneManager.LoadScene(nextSceneName);       
     }

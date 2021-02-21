@@ -8,7 +8,14 @@ public class startMenuManager : MonoBehaviour
 {
 
     public string scenes;
+    public GameObject mainCanvas;
+    public GameObject creditsCanvas;
 
+    void Start()
+    {
+        mainCanvas.SetActive(true);
+        creditsCanvas.SetActive(false);
+    }
 
     public void startScenes()
     {
@@ -20,6 +27,19 @@ public class startMenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void creditsGo()
+    {
+        mainCanvas.SetActive(false);
+        creditsCanvas.SetActive(true);
+    }
+
+    public void back()
+    {
+        mainCanvas.SetActive(true);
+        creditsCanvas.SetActive(false);
+    }
+
 
     void sceneLoad()
     {
