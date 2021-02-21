@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-[RequireComponent (typeof (Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class CelestialBody : GravityObject {
 
     public float radius;
@@ -11,10 +11,15 @@ public class CelestialBody : GravityObject {
     public string bodyName = "Unnamed";
     public bool isblackhole = false;
     public bool isactive = true;
+
     Transform meshHolder;
 
     public Vector2 velocity { get; private set; }
-    [SerializeField]private float calcmass;
+    [SerializeField] private float calcmass;
+    public bool useSpecialColor = false;
+    public Color color{ get { return useSpecialColor ? SpecialColor : GetComponent<SpriteRenderer>().color; } }
+    [SerializeField] private Color SpecialColor;
+
     public float mass { get { if (isactive) return calcmass; else return 0f; } set { calcmass = value; } }
     Rigidbody2D rb;
 

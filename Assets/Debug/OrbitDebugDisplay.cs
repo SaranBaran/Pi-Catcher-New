@@ -74,7 +74,7 @@ public class OrbitDebugDisplay : MonoBehaviour {
 
         // Draw paths
         for (int bodyIndex = 0; bodyIndex < virtualBodies.Length; bodyIndex++) {
-            var pathColour = bodies[bodyIndex].gameObject.GetComponentInChildren<SpriteRenderer> ().color; //
+            var pathColour = bodies[bodyIndex].color; //
 
             if (useThickLines) {
                 var lineRenderer = bodies[bodyIndex].gameObject.GetComponentInChildren<LineRenderer> ();
