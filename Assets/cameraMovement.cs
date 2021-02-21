@@ -21,7 +21,16 @@ public class cameraMovement : MonoBehaviour
 
     void Update()
     {
-
+        rover = rover ?? GameObject.FindObjectOfType<RoverManager>();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            this.transform.position=new Vector3 (rover.transform.position.x, rover.transform.position.y, transform.position.z);
+        }
+        if (rover.isZoom)
+        {
+            transform.position = new Vector3(rover.transform.position.x, rover.transform.position.y, transform.position.z);
+            cam.orthographicSize = 3f;
+        }
         if (Input.mouseScrollDelta!=Vector2.zero)
         {
             lastposcroll = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -42,15 +51,6 @@ public class cameraMovement : MonoBehaviour
             Camera.current.transform.Translate(new Vector3(xAxisValue*speedWASD, yAxisValue*speedWASD, 0.0f));
         }
 
-        if (Input.GetKey(KeyCode.R))
-        {
-            transform.position.Set(rover.transform.position.x, rover.transform.position.y, transform.position.z);
-        }
-        if (rover.isZoom)
-        {
-            transform.position.Set(rover.transform.position.x, rover.transform.position.y, transform.position.z);
-            cam.orthographicSize = 3f;
-        }
     }
 
     public void LateUpdate()
